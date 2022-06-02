@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
 }
 
 /* Layout */
@@ -20,9 +22,32 @@
 .sidebar {
     grid-row: 1 / -1;
     background-color: #E89005;
+    padding: 0 5vh 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
 }
 
 .main-content {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+}
+
+/* Navbar Styles */
+.heading,
+.options li,
+.settings li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.heading {
+    font-size: 30px;
+}
+
+.material-symbols-outlined {
+    margin-right: 20px;
 }
