@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    color: #fff;
 }
 
 /* Layout */
@@ -27,6 +26,7 @@
     flex-direction: column;
     justify-content: space-between;
     font-size: 20px;
+    color: #fff;
 }
 
 .main-content {
@@ -50,4 +50,78 @@
 
 .material-symbols-outlined {
     margin-right: 20px;
+}
+
+/* Header Styling */
+.header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-top-header,
+.right-top-header,
+.left-bottom-header,
+.right-bottom-header {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.left-top-header,
+.left-bottom-header {
+    margin-left: 50px;
+}
+
+.right-top-header,
+.right-bottom-header {
+    margin-right: 50px;
+}
+
+.left-top-header input {
+    height: 30px;
+    width: 500px;
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.right-top-header img {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.right-bottom-header button {
+    margin-left: 20px;
+    border: none;
+    padding:  10px 20px;
+    border-radius: 15px;
+    background-color: #E89005;
+}
+
+.right-bottom-header button:hover {
+    cursor: pointer;
+    background-color: #f5a018;
+}
+
+
+.profile-picture {
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.user {
+    line-height: 30px;
+    align-self: flex-end;
+    position: relative;
+}
+
+.user::before {
+    content: "Hello there,";
+    position: absolute;
+    top: -30px;
+    font-size: 14px;
 }
