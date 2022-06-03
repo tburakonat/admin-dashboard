@@ -10,12 +10,13 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 150px 1fr;
+    grid-template-rows: 130px 1fr;
 }
 
 .header {
     grid-column: 2 / 3;
     box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+    padding-block: 15px;
 }
 
 .sidebar {
@@ -27,11 +28,13 @@
     justify-content: space-between;
     font-size: 20px;
     color: #fff;
+    max-height: 100vh;
 }
 
 .main-content {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    height: calc(100vh - 130px);
 }
 
 /* Navbar Styles */
@@ -50,6 +53,8 @@
 
 .material-symbols-outlined {
     margin-right: 20px;
+    cursor: pointer;
+    user-select: none;
 }
 
 /* Header Styling */
@@ -65,7 +70,6 @@
 .right-bottom-header {
     display: flex;
     align-items: center;
-    margin-top: 10px;
 }
 
 .left-top-header,
@@ -98,12 +102,12 @@
     border: none;
     padding:  10px 20px;
     border-radius: 15px;
-    background-color: #E89005;
+    background-color: #f5a018;
 }
 
 .right-bottom-header button:hover {
     cursor: pointer;
-    background-color: #f5a018;
+    background-color: #E89005;
 }
 
 
@@ -124,4 +128,44 @@
     position: absolute;
     top: -30px;
     font-size: 14px;
+}
+
+/* Main Styling */
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "project announcements"
+                         "project trending";
+}
+
+.projects-section {
+    grid-area: project;
+    padding: 10px;
+    height: calc(100vh - 130px);
+}
+
+.projects-title {
+    margin-top: 10px;
+    color: #f5a018;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.projects {
+    height: calc(100vh - 190px);
+    overflow: auto; /* For this to work, its parent element (.main-content) needs a fixed height */
+    border: 1px solid #f5a018;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.project-card {
+    height: 200px;
+    border: 1px solid #f5a018;
+    border-radius: 15px;
 }
