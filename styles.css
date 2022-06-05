@@ -22,6 +22,7 @@
     grid-column: 2 / 3;
     box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
     padding-block: 15px;
+    position: relative;
 }
 
 .sidebar {
@@ -40,6 +41,7 @@
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     height: calc(100vh - 130px);
+    background-color: #e2e8f0;
 }
 
 /* Navbar Styles */
@@ -150,17 +152,16 @@
     height: calc(100vh - 130px);
 }
 
-.projects-title {
+.section-title {
     margin-top: 10px;
-    color: var(--light-orange);
-    font-weight: 300;
+    color: #7f8287;
     font-size: 20px;
 }
 
 .projects {
-    height: calc(100vh - 190px);
-    overflow: auto; /* For this to work, its parent element (.main-content) needs a fixed height */
-    border: 1px solid var(--light-orange);
+    height: calc(100vh - 215px);
+    overflow: auto; /* For this to work, its parent element (.main-content) and itself needs a fixed height */
+    /* border: 1px solid var(--light-orange); */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -171,9 +172,7 @@
 
 .project-card {
     height: 200px;
-    border-top: 1px solid var(--light-orange);
-    border-right: 1px solid var(--light-orange);
-    border-bottom: 1px solid var(--light-orange);
+    background-color: white;
     border-radius: 15px;
     position: relative;
 }
@@ -187,3 +186,28 @@
     background-color: var(--light-orange);
     border-radius: 15px 0 0 15px;
 }
+
+/* Aside Styling */
+.announcements-section,
+.trendings-section {
+    padding: 10px;
+}
+
+.announcements,
+.trendings {
+    margin-top: 10px;
+    padding: 0 20px 20px 20px;
+    display: grid;
+    height: calc(100vh - 550px);
+    background-color: white;
+    border-radius: 15px;
+}
+
+.announcement-card,
+.trending-card {
+    border-bottom: 1px solid silver;
+}
+
+
+/* TODO */
+/* FIX BOX SHADOW ON HEADER */
