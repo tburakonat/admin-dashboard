@@ -161,7 +161,6 @@
 .projects {
     height: calc(100vh - 215px);
     overflow: auto; /* For this to work, its parent element (.main-content) and itself needs a fixed height */
-    /* border: 1px solid var(--light-orange); */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -175,6 +174,22 @@
     background-color: white;
     border-radius: 15px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card * {
+    margin-left: 30px;
+    padding: 10px;
+}
+
+.project-name {
+    font-size: 16px;
+}
+
+.project-card div {
+    align-self: flex-end;
 }
 
 .project-card::before {
@@ -196,7 +211,7 @@
 .announcements,
 .trendings {
     margin-top: 10px;
-    padding: 0 20px 20px 20px;
+    padding: 20px;
     display: grid;
     height: calc(100vh - 550px);
     background-color: white;
@@ -205,9 +220,5 @@
 
 .announcement-card,
 .trending-card {
-    border-bottom: 1px solid silver;
+    padding: 10px;
 }
-
-
-/* TODO */
-/* FIX BOX SHADOW ON HEADER */
